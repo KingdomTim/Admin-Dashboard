@@ -6,7 +6,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
-    height: 100vh;
 }
 
 .main {
@@ -36,11 +35,51 @@ body {
     display: grid;
     padding: 10px;
     border: 1px solid black;
+    grid-template-rows: 10% 30% 30%;
 }
 
 .header {
     border: 1px solid black;
     display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding: 30px;
+}
+
+.topHeader {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.notificationBell {
+    height: 2rem;
+    width: 2rem;
+}
+
+.searchButton {
+    height: 2rem;
+    width: 2rem;
+}
+
+.smallProfile {
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 2rem;
+}
+
+.bottomHeader {
+    display: grid;
+    grid-column: 1fr 1fr;
+    align-items: center;
+}
+
+.bigProfile {
+    border-radius: 50%;
+    height: 3rem;
+    width: 5rem;
+}
+
+.buttons {
+    grid-column: 2;
 }
 
 .announcementCard {
@@ -79,6 +118,20 @@ body {
     grid-column: 2;
 }
 
+.trendingCard {
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.teganProfile,
+.morganProfile,
+.kendallProfile,
+.alexProfile {
+    height: 2rem;
+    width: 4rem;
+}
 
 
 
