@@ -1,5 +1,12 @@
+@font-face {
+    font-family: customFont;
+    src: url("animeace2bb_tt/animeace2_reg.ttf");
+}
+
 body {
     margin: 0%;
+    font-family: customFont,Arial, Helvetica, sans-serif;
+    color: black;
 }
 
 .dashboard {
@@ -9,11 +16,12 @@ body {
 }
 
 .main {
-    border: 1px solid black;
     padding: 32px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .project1,
@@ -22,8 +30,10 @@ body {
 .project4,
 .project5,
 .project6 {
-    border: 1px solid black;
     height: 250px;
+    display: grid;
+    grid-template-rows: 2fr 4fr 1fr;
+    
 }
 
 .name {
@@ -34,16 +44,51 @@ body {
     grid-row: 1/3;
     display: grid;
     padding: 10px;
-    border: 1px solid black;
-    grid-template-rows: 1fr 3fr 2fr 3fr;
+    grid-template-rows: 1fr 10fr;
+    color: white;
+    background-color: rgb(0, 136, 255);
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .justiceLeague {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
 }
+
+.dashboardTitle {
+    font-size: 30px;
+}
+
+.navigation {
+    grid-row: 2;
+    font-size: 20px;
+}
+
+.navigation > ul {
+    list-style-type: none;
+}
+
+.sidebar > div > ul > li > img {
+    height: 1.5rem;
+    align-self: center;
+    margin-right: 20px;
+}
+
+.mainNavigation,
+.miscallaneous {
+    display: grid;
+    gap: 30px;
+}
+
+.miscallaneous {
+    margin-top: 60px;
+}
+
 .header {
-    border: 1px solid black;
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding-left: 30px;
@@ -58,6 +103,11 @@ body {
 .notificationBell {
     height: 2rem;
     width: 2rem;
+    cursor: pointer;
+}
+
+.notificationBell:hover {
+    transform: scale(1.1)
 }
 
 .searchButton {
@@ -66,10 +116,19 @@ body {
     justify-self: end;
 }
 
+.searchButton:hover {
+    cursor:pointer; 
+    transform: scale(1.1);
+}
+
 .searchBar {
     border-radius: 18px;
     max-width: 850px;
     height: 25px;
+    background-color: rgb(82,82,82,0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    padding-left: 13px;
 }
 
 .search {
@@ -94,6 +153,16 @@ body {
     justify-self: flex-start;
 }
 
+.smallProfile:hover {
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.profileName:hover {
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
 .bottomHeader {
     display: grid;
     align-items: center;
@@ -113,6 +182,11 @@ body {
     width: 6.5rem;
 }
 
+.bigProfile:hover {
+    cursor: pointer;
+    transform: scale(1.1)
+}
+
 .text {
     grid-column: 2;
 }
@@ -128,20 +202,40 @@ button {
     border-radius: 10px;
     height: 35px;
     width: 100px;
+    background-color: rgb(0, 136, 255);
+    font-family: customFont,Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
-.announcementCard {
-    border: 1px solid black;
+button:hover {
+    color: black;
+}
+
+.home:hover,
+.profile:hover,
+.messages:hover,
+.history:hover,
+.tasks:hover,
+.communities:hover,
+.settings:hover,
+.support:hover,
+.privacy:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .trendingCard {
-    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .projects {
     grid-column: 1;
-    display: grid;
     grid-row: 1/3;
+    display: grid;
 }
 
 .projectCards {
@@ -153,12 +247,20 @@ button {
 .project3,
 .project5 {
     grid-column: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .project2,
 .project4,
 .project6 {
     grid-column: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .announcements,
@@ -166,25 +268,58 @@ button {
     grid-column: 2;
 }
 
-.trendingCard {
-    display: grid;
-    padding: 5px;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
+.announcementCard {
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-.teganProfile,
-.morganProfile,
-.kendallProfile,
-.alexProfile {
-    height: 2rem;
+.trendingCard {
+    display: grid;
+    gap: 10px;
+    padding: 5px;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    background-color: white;
+}
+
+.flashProfile,
+.supermanProfile,
+.wonderWomanProfile,
+.greenLanternProfile {
+    height: 4rem;
     width: 4rem;
     justify-self: center;
 }
 
+.cardButtons {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
 
+.star {
+    justify-self: center;
+    width: 1.5rem;
+}
 
+.eye {
+    width: 2.5rem
+}
 
+.fork {
+    justify-self:center;
+    width: 1rem;
+}
+
+.star:hover,
+.eye:hover,
+.fork:hover {
+    transform: scale(1.1);
+    cursor:pointer;
+}
 
 
 
