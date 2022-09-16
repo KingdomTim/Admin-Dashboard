@@ -35,19 +35,24 @@ body {
     display: grid;
     padding: 10px;
     border: 1px solid black;
-    grid-template-rows: 10% 30% 30%;
+    grid-template-rows: 1fr 3fr 2fr 3fr;
 }
 
+.justiceLeague {
+    width: 50px;
+    height: 50px;
+}
 .header {
     border: 1px solid black;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .topHeader {
     display:grid;
-    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
 }
 
 .notificationBell {
@@ -56,30 +61,73 @@ body {
 }
 
 .searchButton {
-    height: 2rem;
-    width: 2rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    justify-self: end;
+}
+
+.searchBar {
+    border-radius: 18px;
+    max-width: 850px;
+    height: 25px;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 1fr 35fr;
+    align-items: center;
+    grid-gap: 12px;
+}
+
+.profileInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    grid-column: 2;
 }
 
 .smallProfile {
     border-radius: 50%;
-    height: 1.5rem;
-    width: 2rem;
+    height: 2rem;
+    width: 2.7rem;
+    justify-self: flex-start;
 }
 
 .bottomHeader {
     display: grid;
-    grid-column: 1fr 1fr;
     align-items: center;
+    justify-content: space-between;
+}
+
+.greeting {
+    display: grid;
+    align-items: center;
+    grid-column: 1fr 1fr;
+    grid-gap: 10px;
 }
 
 .bigProfile {
     border-radius: 50%;
-    height: 3rem;
-    width: 5rem;
+    height: 5rem;
+    width: 6.5rem;
+}
+
+.text {
+    grid-column: 2;
 }
 
 .buttons {
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+button {
+    border-radius: 10px;
+    height: 35px;
+    width: 100px;
 }
 
 .announcementCard {
@@ -131,6 +179,7 @@ body {
 .alexProfile {
     height: 2rem;
     width: 4rem;
+    justify-self: center;
 }
 
 
