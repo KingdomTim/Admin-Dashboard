@@ -235,11 +235,11 @@ button:hover {
 .projects {
     grid-column: 1;
     grid-row: 1/3;
-    display: grid;
 }
 
 .projectCards {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -250,7 +250,6 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-    flex-wrap: wrap;
 }
 
 .project2,
@@ -260,7 +259,6 @@ button:hover {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-    flex-wrap: wrap;
 }
 
 .announcements,
@@ -306,7 +304,7 @@ button:hover {
 }
 
 .eye {
-    width: 2.5rem
+    width: 2.5rem;
 }
 
 .fork {
